@@ -4,6 +4,10 @@ from PIL import Image
 import io
 import stat
 
+###############################################################
+#NOTE : To work with ghost script, we have to install Ghostscript
+# from this site on windows: https://ghostscript.com/releases/gsdnld.html
+################################################################
 ########################################################################
 import subprocess
 import os
