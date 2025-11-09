@@ -2,6 +2,7 @@
 Web project to perform PDF operations.
 
 NOTE: 
+
 1- Server: Used python server for handling REST API using Flask.
 command to run server: py server.js
 Starting for the first time will need to install the python dependencies.
