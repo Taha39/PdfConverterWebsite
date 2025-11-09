@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDFMaster - Convert & Manipulate PDFs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📄</span>
+                    <h1>PDFMaster</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <!--<li><a href="#" class="nav-link active" data-section="home">Home</a></li>-->
+                        <li><a href="#" class="nav-link" data-section="tools">Tools</a></li>
+                        <li><a href="#" class="nav-link" data-section="about">About</a></li>
+                        <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!--<section class="hero" id="home-section">
+        <div class="container">
+            <h2>Convert & Manipulate PDFs with Ease</h2>
+            <p>Free online PDF tools for all your document needs. Convert, merge, split, and edit PDF files securely.</p>
+            <button class="upload-btn" id="get-started-btn">Get Started</button>
+        </div>
+    </section>-->
+
+    <!-- Tools Section -->
+    <section class="tools-section" id="tools-section">
+        <div class="container">
+            <h2 class="section-title">PDF Tools</h2>
+            <div class="tools-grid">
+                <!-- Conversion Tools -->
+                <div class="tool-card" data-tool="image-to-pdf">
+                    <div class="tool-icon">🖼️</div>
+                    <h3>Image to PDF</h3>
+                    <p>Convert JPG, PNG, and other image formats to PDF documents.</p>
+                </div>
+                <div class="tool-card" data-tool="word-to-pdf">
+                    <div class="tool-icon">📝</div>
+                    <h3>Word to PDF</h3>
+                    <p>Convert DOC and DOCX files to high-quality PDFs.</p>
+                </div>
+                <div class="tool-card" data-tool="excel-to-pdf">
+                    <div class="tool-icon">📊</div>
+                    <h3>Excel to PDF</h3>
+                    <p>Convert XLS and XLSX files with formatting preserved.</p>
+                </div>
+                <div class="tool-card" data-tool="txt-to-pdf">
+                    <div class="tool-icon">📄</div>
+                    <h3>Text to PDF</h3>
+                    <p>Convert plain text files to readable PDF format.</p>
+                </div>
+                <div class="tool-card" data-tool="pdf-to-image">
+                    <div class="tool-icon">🖼️</div>
+                    <h3>PDF to Image</h3>
+                    <p>Extract images or convert PDF pages to image files.</p>
+                </div>
+                <div class="tool-card" data-tool="pdf-to-word">
+                    <div class="tool-icon">📝</div>
+                    <h3>PDF to Word</h3>
+                    <p>Convert PDF documents to editable Word format.</p>
+                </div>
+                
+                <div class="tool-card" data-tool="compress-pdf">
+                    <div class="tool-icon">🗜️</div>
+                    <h3>Compress PDF</h3>
+                    <p>Reduce PDF file size while maintaining quality.</p>
+                </div>
+                <!-- Manipulation Tools -->
+                <!--<div class="tool-card" data-tool="pdf-to-editable">
+                    <div class="tool-icon">✏️</div>
+                    <h3>Make PDF Editable</h3>
+                    <p>Convert scanned or flattened PDFs to editable format using OCR.</p>
+                </div>-->
+                <div class="tool-card" data-tool="split-pdf">
+                    <div class="tool-icon">✂️</div>
+                    <h3>Split PDF</h3>
+                    <p>Split multi-page PDFs into separate files by page ranges.</p>
+                </div>
+                <div class="tool-card" data-tool="merge-pdf">
+                    <div class="tool-icon">📑</div>
+                    <h3>Merge PDF</h3>
+                    <p>Combine multiple PDF files into a single document.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Converter Section -->
+    <section class="converter-section" id="converter-section">
+        <div class="container">
+            <div class="converter-header">
+                <button class="back-btn" id="back-btn">←</button>
+                <h2 id="converter-title">Converter</h2>
+            </div>
+            <div class="converter-content">
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-icon">📁</div>
+                    <p>Drag & drop files here or click to browse</p>
+                    <p class="file-types" id="file-types">Supported formats: JPG, PNG, GIF</p>
+                    <button class="upload-btn" id="browse-btn">Browse Files</button>
+                    <input type="file" class="file-input" id="file-input" multiple>
+                </div>
+                
+                <div class="file-list" id="file-list"></div>
+                
+                <div class="options-section" id="options-section">
+                    <!-- Options will be dynamically populated based on the tool -->
+                </div>
+                
+                <button class="action-btn" id="convert-btn" disabled>Convert</button>
+                
+                <div class="progress-section" id="progress-section">
+                    <h3>Processing...</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p id="progress-text">0%</p>
+                </div>
+                
+                <div class="result-section" id="result-section">
+                    <h3>Conversion Complete!</h3>
+                    <p>Your file has been successfully processed. Look inside download folder...</p>
+                    <!--<button class="download-btn" id="download-btn">
+                        <span>Download</span>
+                        <span>⬇️</span>
+                    </button>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PDFMaster</h3>
+                    <p>Your all-in-one solution for PDF conversion and manipulation needs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="#">Image to PDF</a></li>
+                        <li><a href="#">Word to PDF</a></li>
+                        <li><a href="#">Excel to PDF</a></li>
+                        <li><a href="#">Split PDF</a></li>
+                        <li><a href="#">Merge PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 PDFMaster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
